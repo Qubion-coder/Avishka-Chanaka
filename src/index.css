@@ -2,10 +2,9 @@
 @import "tailwindcss";
 
 @theme {
-  /* White/Green/Orange Color Palette */
-  --color-brand-plum: #b89645;
-  --color-brand-lavender: #C1D5C0;
-  --color-brand-rose: #FDE6D5;
+  --color-brand-plum: #C5A059;
+  --color-brand-lavender: #E8DFCE;
+  --color-brand-rose: #F4E6CE;
   --color-brand-blush: #ffffff;
 
   --font-serif: "Cormorant Garamond", serif;

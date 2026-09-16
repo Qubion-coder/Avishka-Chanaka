@@ -48,7 +48,7 @@ export const CeremonyDetails: React.FC<CeremonyDetailsProps> = ({ event = 'both'
                 </div>
                 <div>
                   <h4 className="font-serif text-2xl sm:text-3xl text-stone-800 group-hover:text-brand-plum transition-colors duration-500">
-                    Date: October 22, 2026
+                    Date: December 10, 2026
                   </h4>
                 </div>
               </div>
@@ -60,14 +60,14 @@ export const CeremonyDetails: React.FC<CeremonyDetailsProps> = ({ event = 'both'
                 </div>
                 <div>
                   <h4 className="font-serif text-2xl sm:text-3xl text-stone-800 mb-3 group-hover:text-brand-plum transition-colors duration-500">
-                    Poruwa Ceremony
+                    Holy Mass
                   </h4>
                   <div className="space-y-1.5 text-stone-500/90 font-serif text-base sm:text-lg">
                     <p>
-                      <span className="font-semibold text-stone-700">Time:</span> 09.15 AM
+                      <span className="font-semibold text-stone-700">Time:</span> 04.00 PM
                     </p>
                     <p className="leading-relaxed">
-                      <span className="font-semibold text-stone-700">Venue:</span> Mahogany Ballroom,<br className="hidden sm:block" /> Cinnamon Grand
+                      <span className="font-semibold text-stone-700">Venue:</span> St. Mary's Church,<br className="hidden sm:block" /> Colombo 04
                     </p>
                   </div>
                 </div>

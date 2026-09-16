@@ -4,7 +4,7 @@ import { Hero } from './Hero';
 import { CoupleDetails } from './CoupleDetails';
 import { CeremonyDetails } from './CeremonyDetails';
 import { Location } from './Location';
-import { Timeline } from './Timeline';
+
 import { Countdown } from './Countdown';
 import { RSVPForm } from './RSVPForm';
 
@@ -80,9 +80,7 @@ export function InvitationContent({
         </div>
       </DeferredMount>
 
-      <DeferredMount active={active} delay={300} minHeight="40vh">
-        <Timeline />
-      </DeferredMount>
+
 
       <DeferredMount active={active} delay={360} minHeight="20vh">
         <div className="py-24 sm:py-32 relative overflow-hidden bg-[#FDFBF7]">
@@ -104,9 +102,9 @@ export function InvitationContent({
         <footer className="py-12 bg-white border-t border-brand-lavender/20 text-center relative overflow-hidden mt-10">
           <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-64 h-64 bg-brand-lavender/10 blur-[80px] rounded-full pointer-events-none" />
           <Heart className="w-6 h-6 mx-auto mb-6 text-brand-plum fill-brand-lavender/20" />
-          <p className="font-names text-4xl sm:text-5xl text-stone-800 mb-2">Warsha & Mennan</p>
+          <p className="font-names text-4xl sm:text-5xl text-stone-800 mb-2">Kithminie & Brenden</p>
           <span className="text-[10px] sm:text-[11px] uppercase tracking-[0.4em] font-sans text-stone-400 font-semibold block mb-4">
-            October 22, 2026
+            December 10, 2026
           </span>
           
           <div className="w-12 h-[1px] bg-brand-lavender/30 mx-auto my-6" />

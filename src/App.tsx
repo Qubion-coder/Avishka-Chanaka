@@ -24,7 +24,7 @@ export default function App() {
 
   let eventLabel = 'Our Wedding Celebration';
 
-  const weddingDate = new Date('2026-10-22T09:15:00');
+  const weddingDate = new Date('2026-12-10T16:00:00');
 
   useEffect(() => {
     if (isAdminRoute()) return;
@@ -49,7 +49,7 @@ export default function App() {
 
   const ensureAudio = useCallback(() => {
     if (!audioRef.current) {
-      audioRef.current = new Audio('/Dreams Come True - Dylan Carwyn Romantic Wedding Song 2025 (Lyrics) - Dazzling Tunes (128k).mp3');
+      audioRef.current = new Audio('/shania_twain_-_u_are_still_the_one_(mp3.pm).mp3');
       audioRef.current.loop = true;
       audioRef.current.volume = 0.3;
       audioRef.current.preload = 'none';

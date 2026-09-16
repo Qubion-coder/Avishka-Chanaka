@@ -21,7 +21,7 @@ export const CoupleDetails: React.FC = () => {
             <div className="w-12 sm:w-20 h-[1px] bg-gradient-to-l from-transparent to-brand-plum/60" />
           </div>
           <h2 className="text-5xl sm:text-7xl font-names text-stone-800 tracking-tight drop-shadow-sm">
-            Warsha <span className="text-brand-plum font-light mx-2">&</span> Mennan
+            Kithminie <span className="text-brand-plum font-light mx-2">&</span> Brenden
           </h2>
         </motion.div>
       </div>
@@ -46,69 +46,16 @@ export const CoupleDetails: React.FC = () => {
 
           <div className="mb-4 flex flex-col items-center lg:items-end relative z-10">
             <span className="text-[#8B6508] uppercase tracking-[0.4em] text-[10px] font-bold mb-3 block">The Groom</span>
-            <h3 className="text-4xl sm:text-5xl font-['Cormorant_Garamond',_serif] text-stone-800 mb-2 drop-shadow-sm">Mennan</h3>
+            <h3 className="text-4xl sm:text-5xl font-['Cormorant_Garamond',_serif] text-stone-800 mb-2 drop-shadow-sm">Brenden</h3>
             <p className="text-stone-700 font-century text-xs mb-2"></p>
-            <p className="text-stone-500/90 font-serif italic text-base sm:text-lg">Son of Mr & Mrs Prakash</p>
+            <p className="text-stone-500/90 font-serif italic text-base sm:text-lg">Son of Mr & Mrs De Silva</p>
           </div>
           <div className="hidden lg:flex justify-end mt-8 relative z-10">
             <Heart className="w-6 h-6 text-brand-lavender/60 fill-brand-lavender/20 transform hover:scale-110 transition-transform cursor-pointer" />
           </div>
         </motion.div>
 
-        {/* Center Couple Image Collage */}
-        <motion.div
-          initial={{ opacity: 0, scale: 0.95 }}
-          whileInView={{ opacity: 1, scale: 1 }}
-          viewport={{ once: true }}
-          transition={{ duration: 1.2, ease: "easeOut" }}
-          className="relative w-full max-w-sm sm:max-w-md lg:w-[35%] aspect-[4/5] mx-auto order-1 lg:order-2 flex-shrink-0 z-20 mb-12 lg:mb-0"
-        >
-          {/* Background Glow */}
-          <div className="absolute inset-0 bg-gradient-radial from-brand-lavender/30 to-transparent blur-3xl -z-10" />
-          
-          <div className="absolute inset-0 grid grid-cols-2 grid-rows-2 gap-3 sm:gap-4 p-2 sm:p-4">
-            {/* Top Left - Arch top */}
-            <motion.div 
-              whileHover={{ scale: 1.05, rotate: -2, zIndex: 10 }}
-              className="relative w-full h-full rounded-t-full rounded-bl-3xl rounded-br-lg overflow-hidden shadow-[0_15px_30px_rgba(176,137,104,0.2)] border-[3px] border-white transform transition-all duration-500"
-            >
-              <img src="/pre/1ISI04309.jpg (1).jpeg" alt="Couple" className="absolute inset-0 w-full h-full object-cover" />
-              <div className="absolute inset-0 bg-brand-plum/10 mix-blend-overlay"></div>
-            </motion.div>
 
-            {/* Top Right - Offset down slightly */}
-            <motion.div 
-              whileHover={{ scale: 1.05, rotate: 2, zIndex: 10 }}
-              className="relative w-full h-full rounded-t-full rounded-br-3xl rounded-bl-lg overflow-hidden shadow-[0_15px_30px_rgba(176,137,104,0.2)] border-[3px] border-white transform translate-y-6 sm:translate-y-8 transition-all duration-500"
-            >
-              <img src="/pre/ISI03901.JPG.jpeg" alt="Couple" className="absolute inset-0 w-full h-full object-cover" />
-              <div className="absolute inset-0 bg-brand-plum/10 mix-blend-overlay"></div>
-            </motion.div>
-
-            {/* Bottom Left - Arch bottom */}
-            <motion.div 
-              whileHover={{ scale: 1.05, rotate: -1, zIndex: 10 }}
-              className="relative w-full h-full rounded-b-full rounded-tl-3xl rounded-tr-lg overflow-hidden shadow-[0_15px_30px_rgba(176,137,104,0.2)] border-[3px] border-white transform -translate-y-4 sm:-translate-y-6 transition-all duration-500"
-            >
-              <img src="/pre/ISI04096.JPG.jpeg" alt="Couple" className="absolute inset-0 w-full h-full object-cover" />
-              <div className="absolute inset-0 bg-brand-plum/10 mix-blend-overlay"></div>
-            </motion.div>
-
-            {/* Bottom Right - Arch bottom */}
-            <motion.div 
-              whileHover={{ scale: 1.05, rotate: 3, zIndex: 10 }}
-              className="relative w-full h-full rounded-b-full rounded-tr-3xl rounded-tl-lg overflow-hidden shadow-[0_15px_30px_rgba(176,137,104,0.2)] border-[3px] border-white transform transition-all duration-500"
-            >
-              <img src="/pre/ISI04169.JPG.jpeg" alt="Couple" className="absolute inset-0 w-full h-full object-cover" />
-              <div className="absolute inset-0 bg-brand-plum/10 mix-blend-overlay"></div>
-            </motion.div>
-          </div>
-
-          {/* Decorative Elements */}
-          <Sparkles className="absolute top-1/2 -left-6 w-6 h-6 text-brand-plum/40 animate-pulse" />
-          <Sparkles className="absolute top-1/4 -right-4 w-5 h-5 text-brand-rose/60 animate-pulse delay-75" />
-          <Heart className="absolute bottom-1/4 -left-2 w-4 h-4 text-brand-lavender/80 animate-bounce" />
-        </motion.div>
         {/* Bride Details (Right) */}
         <motion.div
           initial={{ opacity: 0, x: 30 }}
@@ -119,9 +66,9 @@ export const CoupleDetails: React.FC = () => {
         >
           <div className="mb-4 flex flex-col items-center lg:items-start">
             <span className="text-[#8B6508] uppercase tracking-[0.4em] text-[10px] font-bold mb-3 block mt-28 sm:mt-36 lg:mt-0">The Bride</span>
-            <h3 className="text-4xl sm:text-5xl font-['Cormorant_Garamond',_serif] text-stone-800 mb-2 drop-shadow-sm">Warsha</h3>
+            <h3 className="text-4xl sm:text-5xl font-['Cormorant_Garamond',_serif] text-stone-800 mb-2 drop-shadow-sm">Kithminie</h3>
             <p className="text-stone-700 font-century text-xs mb-2"></p>
-            <p className="text-stone-500/90 font-serif italic text-base sm:text-lg">Daughter of Mr & Mrs Amarasinghe</p>
+            <p className="text-stone-500/90 font-serif italic text-base sm:text-lg">Daughter of Mr & Mrs Palihawadena</p>
           </div>
           <div className="hidden lg:flex justify-start mt-8">
             <Heart className="w-6 h-6 text-brand-lavender/60 fill-brand-lavender/20 transform hover:scale-110 transition-transform cursor-pointer" />

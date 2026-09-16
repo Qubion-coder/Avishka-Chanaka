@@ -35,7 +35,7 @@ export const WishesSection: React.FC<WishesSectionProps> = ({ eventParam = 'both
       setFormData(prev => ({ ...prev, name: inviteeName }));
     }
   }, [inviteeName]);
-  const scriptUrl = "https://script.google.com/macros/s/AKfycbxyOLqbPCF84tUg299jIyA0GuebtYFra-3C-CXxzE851QIQkOs1RRrqBKyYqP6NCSO-/exec";
+  // const scriptUrl = "https://script.google.com/macros/s/AKfycbxyOLqbPCF84tUg299jIyA0GuebtYFra-3C-CXxzE851QIQkOs1RRrqBKyYqP6NCSO-/exec";
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -48,11 +48,11 @@ export const WishesSection: React.FC<WishesSectionProps> = ({ eventParam = 'both
       payload.append('name', formData.name);
       payload.append('message', formData.message);
 
-      await fetch(scriptUrl, {
-        method: 'POST',
-        mode: 'no-cors',
-        body: payload,
-      });
+      // await fetch(scriptUrl, {
+      //   method: 'POST',
+      //   mode: 'no-cors',
+      //   body: payload,
+      // });
 
       const newWish: Wish = {
         id: Date.now().toString(),

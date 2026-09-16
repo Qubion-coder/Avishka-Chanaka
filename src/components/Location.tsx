@@ -10,12 +10,21 @@ export const Location: React.FC<LocationProps> = ({ event = 'both' }) => {
   const venues = [
     {
       id: 'ceremony',
-      name: "Cinnamon Grand",
-      city: "Colombo",
+      name: "St. Mary's Church",
+      city: "Colombo 04",
       quote: `"A beautiful and sacred place where we will unite."`,
-      liveLocationUrl: "https://maps.app.goo.gl/7wcd6uLHpY8HevN66?g_st=ic",
-      imageUrl: "https://cf.bstatic.com/xdata/images/hotel/max1024x768/543025919.jpg?k=fae14e26f4bbf1737e8d67a49cf188efe1699914cdbc808a59fdeccad1080eb3&o=",
-      label: "The Ceremony"
+      liveLocationUrl: "https://maps.app.goo.gl/26dmu5eyEvo5YCsV6",
+      imageUrl: "https://stmarysbambalapitiya.org/wp-content/uploads/2024/12/02.webp",
+      label: "Holy Mass"
+    },
+    {
+      id: 'reception',
+      name: "Barnhouse",
+      city: "Panadura",
+      quote: `"Join us for an evening of celebration, dining, and dancing."`,
+      liveLocationUrl: "https://maps.app.goo.gl/hieMUF8KFAcjMP7s9",
+      imageUrl: "https://barnhouse.lk/wp-content/uploads/2024/06/IMG_0094-1.jpg",
+      label: "The Reception"
     }
   ];
 

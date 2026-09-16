@@ -52,8 +52,8 @@ export const Hero: React.FC<HeroProps> = ({ event = 'both', inviteeName }) => {
       >
         <video
           src="/intro.mp4"
-          className="w-full h-full object-cover"
-          style={{ objectPosition: 'center 20%' }}
+          className="w-full h-full object-contain"
+          style={{ objectPosition: 'center' }}
           autoPlay
           muted
           playsInline
@@ -90,15 +90,15 @@ export const Hero: React.FC<HeroProps> = ({ event = 'both', inviteeName }) => {
             transition={{ delay: 0.5, duration: 0.8 }}
             onClick={() => window.scrollBy({ top: window.innerHeight, behavior: 'smooth' })}
           >
-            <div className="flex flex-col items-center gap-2 bg-black/20 hover:bg-black/40 transition-colors backdrop-blur-md px-6 py-4 rounded-full border border-white/20 shadow-[0_8px_32px_rgba(0,0,0,0.3)]">
-              <span className="text-[10px] font-sans uppercase tracking-[0.4em] text-white font-medium pl-1">
+            <div className="flex flex-col items-center gap-2">
+              <span className="text-[10px] font-sans uppercase tracking-[0.4em] text-white font-medium pl-1 drop-shadow-md">
                 Scroll Down
               </span>
               <motion.div 
                 animate={{ y: [0, 5, 0] }} 
                 transition={{ repeat: Infinity, duration: 1.5, ease: "easeInOut" }}
               >
-                <ChevronDown className="w-5 h-5 text-white" />
+                <ChevronDown className="w-5 h-5 text-white drop-shadow-md" />
               </motion.div>
             </div>
           </motion.div>
