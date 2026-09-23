@@ -112,9 +112,8 @@ export function WelcomeScreen({ onComplete, onMusicStart, readyToTransition = tr
         <button 
           className={`play-button ${started ? 'is-hidden' : ''}`}
           onClick={startEntry}
-          disabled={!readyToTransition}
         >
-          {readyToTransition ? "Click to View Invitation" : "Loading..."}
+          Click to View Invitation
         </button>
       </div>
     </>
