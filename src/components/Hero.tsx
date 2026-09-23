@@ -1,6 +1,6 @@
 import React, { useRef, useState, useEffect } from 'react';
-import { motion, useScroll, useTransform, AnimatePresence } from 'motion/react';
-import { ChevronDown } from 'lucide-react';
+import { motion, useScroll, useTransform } from 'motion/react';
+import { Heart } from 'lucide-react';
 
 interface HeroProps {
   event?: string | null;
@@ -40,70 +40,89 @@ export const Hero: React.FC<HeroProps> = ({ event = 'both', inviteeName }) => {
   const { scrollY } = useScroll();
   const y1 = useTransform(scrollY, [0, 1000], [0, 400]);
   const scale = useTransform(scrollY, [0, 800], [1, 1.1]);
-  const opacity = useTransform(scrollY, [0, 400], [1, 0]);
-
-  const [videoEnded, setVideoEnded] = useState(false);
 
   return (
-    <div ref={containerRef} className="relative h-screen flex items-center justify-center overflow-hidden bg-brand-blush/30">
+    <div ref={containerRef} className="relative h-screen flex flex-col items-center justify-center overflow-hidden bg-[#fdfaf7]">
       <motion.div
         className="absolute inset-0 z-0 origin-center"
         style={useParallax ? { y: y1, scale } : undefined}
       >
-        <video
-          src="/intro.mp4"
-          className="w-full h-full object-contain"
+        <img
+          src="/ChatGPT Image Jul 5, 2026h, 02_20_06 AM.png"
+          alt="Hero Background"
+          className="w-full h-full object-cover opacity-90"
           style={{ objectPosition: 'center' }}
-          autoPlay
-          muted
-          playsInline
-          onEnded={(e) => {
-             // Pauses exactly at the last frame
-             e.currentTarget.pause();
-             setVideoEnded(true);
-          }}
         />
       </motion.div>
 
+      <div className="relative z-10 flex flex-col items-center w-full px-4 sm:px-6 mt-4 sm:mt-0">
+        
+        <motion.div 
+          initial={{ opacity: 0, y: -20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 1, delay: 0.2 }}
+          className="flex items-center justify-center w-full gap-4 mb-6 sm:mb-8"
+        >
+          <div className="w-16 sm:w-24 h-[1px] bg-[#C5A059]/60" />
+          <Heart className="w-4 h-4 text-[#C5A059] fill-[#C5A059]/40" />
+          <div className="w-16 sm:w-24 h-[1px] bg-[#C5A059]/60" />
+        </motion.div>
 
+        <motion.div
+          initial={{ opacity: 0, scale: 0.9 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{ duration: 1, delay: 0.4 }}
+          className="bg-gradient-to-r from-[#fceef0]/90 via-[#ffffff]/90 to-[#fceef0]/90 backdrop-blur-md border border-[#C5A059]/20 px-8 sm:px-12 py-3.5 sm:py-4 rounded-full mb-10 sm:mb-14 shadow-sm"
+        >
+          <span className="text-[#3a3a3a] font-sans text-[10px] sm:text-[11px] tracking-[0.4em] font-bold uppercase drop-shadow-sm">
+            The Celebration of Love
+          </span>
+        </motion.div>
 
-      <AnimatePresence>
-        {videoEnded && (
-          <motion.div
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ duration: 1 }}
-            className="absolute inset-0 z-10 pointer-events-none"
-          >
-            <div className="absolute inset-5 sm:inset-8 border border-brand-plum/30 rounded-3xl shadow-[inset_0_0_30px_rgba(201,169,110,0.1)]" />
-            <div className="absolute inset-6 sm:inset-9 border border-brand-plum/15 rounded-[1.3rem]" />
-          </motion.div>
-        )}
-      </AnimatePresence>
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 1, delay: 0.6 }}
+          className="flex flex-col items-center gap-1 sm:gap-2 mb-10 sm:mb-16"
+        >
+          <h1 className="text-[3.5rem] sm:text-7xl font-names text-[#C5A059] tracking-widest drop-shadow-sm leading-none">
+            AVISHKA
+          </h1>
+          <span className="text-4xl sm:text-5xl font-display text-[#C5A059] drop-shadow-sm my-1">
+            &
+          </span>
+          <h1 className="text-[3.5rem] sm:text-7xl font-names text-[#C5A059] tracking-widest drop-shadow-sm leading-none">
+            CHANAKA
+          </h1>
+        </motion.div>
 
-      <AnimatePresence>
-        {videoEnded && (
-          <motion.div
-            className="absolute bottom-10 sm:bottom-14 left-1/2 -translate-x-1/2 flex flex-col items-center gap-3 cursor-pointer z-30"
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.5, duration: 0.8 }}
-            onClick={() => window.scrollBy({ top: window.innerHeight, behavior: 'smooth' })}
-          >
-            <div className="flex flex-col items-center gap-2">
-              <span className="text-[10px] font-sans uppercase tracking-[0.4em] text-white font-medium pl-1 drop-shadow-md">
-                Scroll Down
-              </span>
-              <motion.div 
-                animate={{ y: [0, 5, 0] }} 
-                transition={{ repeat: Infinity, duration: 1.5, ease: "easeInOut" }}
-              >
-                <ChevronDown className="w-5 h-5 text-white drop-shadow-md" />
-              </motion.div>
-            </div>
-          </motion.div>
-        )}
-      </AnimatePresence>
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 1, delay: 0.8 }}
+          className="bg-white/90 backdrop-blur-md border border-[#C5A059]/15 px-6 sm:px-16 py-8 sm:py-10 rounded-[2.5rem] shadow-[0_8px_30px_rgba(197,160,89,0.12)] max-w-[90%] sm:max-w-xl text-center"
+        >
+          <p className="text-stone-700 font-serif italic text-[1.1rem] sm:text-[1.35rem] leading-relaxed">
+            Together with our families, we<br/>
+            joyfully invite you to join us
+          </p>
+        </motion.div>
+
+      </div>
+
+      <motion.div
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ delay: 1, duration: 1 }}
+        className="absolute bottom-8 sm:bottom-12 left-1/2 -translate-x-1/2 z-30"
+      >
+        <button 
+          onClick={() => window.scrollBy({ top: window.innerHeight, behavior: 'smooth' })}
+          className="bg-gradient-to-r from-[#fceef0]/90 via-[#ffffff]/90 to-[#fceef0]/90 backdrop-blur-md border border-[#C5A059]/30 px-10 sm:px-12 py-3.5 sm:py-4 rounded-full hover:bg-white transition-all text-[#3a3a3a] font-sans text-[10px] sm:text-[11px] tracking-[0.4em] font-bold uppercase shadow-[0_4px_15px_rgba(0,0,0,0.05)] active:scale-95"
+        >
+          Discover
+        </button>
+      </motion.div>
     </div>
   );
 };

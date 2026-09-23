@@ -53,21 +53,47 @@ export const CeremonyDetails: React.FC<CeremonyDetailsProps> = ({ event = 'both'
                 </div>
               </div>
 
-              {/* Church Ceremony */}
+              {/* Venue */}
+              <div className="relative group flex items-center min-h-[48px]">
+                <div className="absolute top-1/2 -translate-y-1/2 -left-[64px] sm:-left-[74px] w-12 h-12 bg-white rounded-full border border-brand-lavender/40 shadow-lg flex items-center justify-center group-hover:border-brand-plum group-hover:shadow-[0_4px_15px_rgba(176,137,104,0.3)] transition-all duration-500">
+                  <MapPin className="w-5 h-5 text-brand-plum group-hover:scale-110 transition-transform duration-500" />
+                </div>
+                <div>
+                  <h4 className="font-serif text-2xl sm:text-3xl text-stone-800 group-hover:text-brand-plum transition-colors duration-500">
+                    Venue: The Balmoral Kingsbury Hotel,<br className="hidden sm:block" /> Colombo
+                  </h4>
+                </div>
+              </div>
+
+              {/* Poruwa Ceremony */}
+              <div className="relative group mb-8">
+                <div className="absolute top-1/2 -translate-y-1/2 -left-[64px] sm:-left-[74px] w-12 h-12 bg-white rounded-full border border-brand-lavender/40 shadow-lg flex items-center justify-center group-hover:border-brand-plum group-hover:shadow-[0_4px_15px_rgba(176,137,104,0.3)] transition-all duration-500">
+                  <Clock className="w-5 h-5 text-brand-plum group-hover:scale-110 transition-transform duration-500" />
+                </div>
+                <div>
+                  <h4 className="font-serif text-2xl sm:text-3xl text-stone-800 mb-3 group-hover:text-brand-plum transition-colors duration-500">
+                    Poruwa Ceremony
+                  </h4>
+                  <div className="space-y-1.5 text-stone-500/90 font-serif text-base sm:text-lg">
+                    <p>
+                      <span className="font-semibold text-stone-700">Time:</span> 10.15 AM
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              {/* Registration */}
               <div className="relative group">
                 <div className="absolute top-1/2 -translate-y-1/2 -left-[64px] sm:-left-[74px] w-12 h-12 bg-white rounded-full border border-brand-lavender/40 shadow-lg flex items-center justify-center group-hover:border-brand-plum group-hover:shadow-[0_4px_15px_rgba(176,137,104,0.3)] transition-all duration-500">
                   <Clock className="w-5 h-5 text-brand-plum group-hover:scale-110 transition-transform duration-500" />
                 </div>
                 <div>
                   <h4 className="font-serif text-2xl sm:text-3xl text-stone-800 mb-3 group-hover:text-brand-plum transition-colors duration-500">
-                    Holy Mass
+                    Registration
                   </h4>
                   <div className="space-y-1.5 text-stone-500/90 font-serif text-base sm:text-lg">
                     <p>
-                      <span className="font-semibold text-stone-700">Time:</span> 04.00 PM
-                    </p>
-                    <p className="leading-relaxed">
-                      <span className="font-semibold text-stone-700">Venue:</span> St. Mary's Church,<br className="hidden sm:block" /> Colombo 04
+                      <span className="font-semibold text-stone-700">Time:</span> 11.00 AM
                     </p>
                   </div>
                 </div>

@@ -10,21 +10,12 @@ export const Location: React.FC<LocationProps> = ({ event = 'both' }) => {
   const venues = [
     {
       id: 'ceremony',
-      name: "St. Mary's Church",
-      city: "Colombo 04",
-      quote: `"A beautiful and sacred place where we will unite."`,
-      liveLocationUrl: "https://maps.app.goo.gl/26dmu5eyEvo5YCsV6",
-      imageUrl: "https://stmarysbambalapitiya.org/wp-content/uploads/2024/12/02.webp",
-      label: "Holy Mass"
-    },
-    {
-      id: 'reception',
-      name: "Barnhouse",
-      city: "Panadura",
-      quote: `"Join us for an evening of celebration, dining, and dancing."`,
-      liveLocationUrl: "https://maps.app.goo.gl/hieMUF8KFAcjMP7s9",
-      imageUrl: "https://barnhouse.lk/wp-content/uploads/2024/06/IMG_0094-1.jpg",
-      label: "The Reception"
+      name: "The Balmoral Kingsbury Hotel",
+      city: "Colombo",
+      quote: `"A beautiful place where we will unite and celebrate."`,
+      liveLocationUrl: "https://maps.app.goo.gl/RXDF6RrfZmQfZuU46",
+      imageUrl: "https://lh3.googleusercontent.com/gps-cs-s/AHRPTWkK7-cn9QI2rqAi-WqnRr3GtUbNitLnyKziotjy8AH47sdtgbpBdW8H3QPAnuHjfWILx6Tx_jpJ46VZuV3tWwY1Mo7CTDoRaSt6PDbmhIp3XtJFj_heL-QRbzQv2mWHfu2UUy9DCKYLCTSl=s1360-w1360-h1020-rw",
+      label: "The Venue"
     }
   ];
 
