@@ -49,7 +49,7 @@ export default function App() {
 
   const ensureAudio = useCallback(() => {
     if (!audioRef.current) {
-      audioRef.current = new Audio('/shania_twain_-_u_are_still_the_one_(mp3.pm).mp3');
+      audioRef.current = new Audio('/Jayamangaala Gaatha (1).mp3');
       audioRef.current.loop = true;
       audioRef.current.volume = 0.3;
       audioRef.current.preload = 'none';
