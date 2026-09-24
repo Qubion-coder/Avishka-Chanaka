@@ -103,8 +103,9 @@ export const Hero: React.FC<HeroProps> = ({ event = 'both', inviteeName }) => {
           className="bg-white/90 backdrop-blur-md border border-[#C5A059]/15 px-6 sm:px-16 py-8 sm:py-10 rounded-[2.5rem] shadow-[0_8px_30px_rgba(197,160,89,0.12)] max-w-[90%] sm:max-w-xl text-center"
         >
           <p className="text-stone-700 font-serif italic text-[1.1rem] sm:text-[1.35rem] leading-relaxed">
+            {inviteeName && <span className="font-semibold block mb-2 text-stone-800">Dear {inviteeName},</span>}
             Together with our families, we<br/>
-            joyfully invite you to join us
+            cordially invite you to join us
           </p>
         </motion.div>
 

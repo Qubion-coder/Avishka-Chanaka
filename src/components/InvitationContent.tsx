@@ -4,6 +4,7 @@ import { Hero } from './Hero';
 import { CoupleDetails } from './CoupleDetails';
 import { CeremonyDetails } from './CeremonyDetails';
 import { Location } from './Location';
+import { Timeline } from './Timeline';
 
 import { Countdown } from './Countdown';
 import { RSVPForm } from './RSVPForm';
@@ -80,7 +81,9 @@ export function InvitationContent({
         </div>
       </DeferredMount>
 
-
+      <DeferredMount active={active} delay={300} minHeight="40vh">
+        <Timeline />
+      </DeferredMount>
 
       <DeferredMount active={active} delay={360} minHeight="20vh">
         <div className="py-24 sm:py-32 relative overflow-hidden bg-[#FDFBF7]">

@@ -2,10 +2,10 @@
 @import "tailwindcss";
 
 @theme {
-  --color-brand-plum: #C5A059;
-  --color-brand-lavender: #E8DFCE;
-  --color-brand-rose: #F4E6CE;
-  --color-brand-blush: #ffffff;
+  --color-brand-plum: #C07C88;
+  --color-brand-lavender: #F2D8D6;
+  --color-brand-rose: #EED0D4;
+  --color-brand-blush: #FCF7F7;
 
   --font-serif: "Cormorant Garamond", serif;
   --font-display: "Great Vibes", cursive;
