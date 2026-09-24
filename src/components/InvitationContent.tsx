@@ -8,6 +8,7 @@ import { Timeline } from './Timeline';
 
 import { Countdown } from './Countdown';
 import { RSVPForm } from './RSVPForm';
+import { BestWishes } from './BestWishes';
 
 import { InviteeBanner } from './InviteeBanner';
 import { DeferredMount } from './DeferredMount';
@@ -99,7 +100,11 @@ export function InvitationContent({
         </div>
       </DeferredMount>
 
-
+      <DeferredMount active={active} delay={480} minHeight="30vh">
+        <div className="py-24 sm:py-32 bg-[#FDFBF7] relative overflow-hidden">
+          <BestWishes />
+        </div>
+      </DeferredMount>
 
       <DeferredMount active={active} delay={520}>
         <footer className="py-12 bg-white border-t border-brand-lavender/20 text-center relative overflow-hidden mt-10">

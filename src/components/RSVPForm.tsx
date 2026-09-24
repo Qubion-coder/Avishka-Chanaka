@@ -183,15 +183,7 @@ export const RSVPForm: React.FC<RSVPFormProps> = ({ inviteeName = '', eventName 
                   </div>
                 </div>
 
-                <div>
-                  <label className="block text-[10px] uppercase tracking-[0.2em] font-bold text-stone-500 mb-2 ml-2">A thought for the couple</label>
-                  <textarea
-                    placeholder="Share your wishes, thoughts, or advice..."
-                    className="w-full bg-white/80 px-6 py-3 rounded-[2rem] border border-stone-200/60 focus:ring-2 focus:ring-brand-lavender/30 focus:border-brand-plum/40 outline-none transition-all duration-300 h-20 resize-none font-serif italic text-base shadow-inner placeholder:text-stone-300"
-                    value={formData.thoughts}
-                    onChange={(e) => setFormData({ ...formData, thoughts: e.target.value })}
-                  />
-                </div>
+
 
                 <div className="pt-2">
                   <button
