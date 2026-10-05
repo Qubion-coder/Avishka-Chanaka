@@ -1,23 +1,39 @@
 import React, { useState } from 'react';
 import { motion } from 'motion/react';
-import { Heart, Send, Sparkles } from 'lucide-react';
+import { Heart, Send, Sparkles, Loader2 } from 'lucide-react';
 
 export const BestWishes = () => {
   const [name, setName] = useState('');
   const [message, setMessage] = useState('');
   const [submitted, setSubmitted] = useState(false);
+  const [isSubmitting, setIsSubmitting] = useState(false);
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     if (!name.trim() || !message.trim()) return;
     
-    // Construct WhatsApp message (optional, but requested by standard workflow for wishes/rsvp)
-    const waMessage = `*Best Wishes for Chanaka & Avishka* ❤️\n\n*From:* ${name}\n\n*Message:*\n${message}`;
-    const encodedMessage = encodeURIComponent(waMessage);
-    const waUrl = `https://wa.me/94707819074?text=${encodedMessage}`;
+    setIsSubmitting(true);
     
-    window.open(waUrl, '_blank');
-    setSubmitted(true);
+    try {
+      const payload = new FormData();
+      payload.append('sheet', 'WISH');
+      payload.append('name', name);
+      payload.append('message', message);
+
+      const scriptUrl = "https://script.google.com/macros/s/AKfycbxT6naTh_z7pNyfIedLGYart4d7mLDvm0uNJYk0KwbhXEqG9nNrtAzrP6PwxSiVGd3F/exec";
+      
+      await fetch(scriptUrl, {
+        method: 'POST',
+        mode: 'no-cors',
+        body: payload,
+      });
+
+      setSubmitted(true);
+    } catch (error) {
+      console.error('Error submitting wish: ', error);
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   return (
@@ -92,10 +108,17 @@ export const BestWishes = () => {
             
             <button
               type="submit"
-              className="w-full bg-stone-800 text-brand-rose py-4 sm:py-5 rounded-full font-sans tracking-[0.3em] font-bold text-[10px] sm:text-xs uppercase hover:bg-stone-900 transition-all shadow-lg hover:shadow-xl active:scale-[0.98] flex items-center justify-center gap-3 mt-4 group"
+              disabled={isSubmitting}
+              className="w-full bg-stone-800 text-brand-rose py-4 sm:py-5 rounded-full font-sans tracking-[0.3em] font-bold text-[10px] sm:text-xs uppercase hover:bg-stone-900 transition-all shadow-lg hover:shadow-xl active:scale-[0.98] flex items-center justify-center gap-3 mt-4 group disabled:opacity-70"
             >
-              Send Wishes
-              <Send className="w-4 h-4 text-brand-plum group-hover:translate-x-1 transition-transform" />
+              {isSubmitting ? (
+                <Loader2 className="w-4 h-4 animate-spin" />
+              ) : (
+                <>
+                  Send Wishes
+                  <Send className="w-4 h-4 text-brand-plum group-hover:translate-x-1 transition-transform" />
+                </>
+              )}
             </button>
           </form>
         )}
