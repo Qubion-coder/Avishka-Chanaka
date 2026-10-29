@@ -14,7 +14,7 @@ export const Location: React.FC<LocationProps> = ({ event = 'both' }) => {
       city: "Colombo",
       quote: `"A beautiful place where we will unite and celebrate."`,
       liveLocationUrl: "https://maps.app.goo.gl/RXDF6RrfZmQfZuU46",
-      imageUrl: "https://lh3.googleusercontent.com/gps-cs-s/AHRPTWkK7-cn9QI2rqAi-WqnRr3GtUbNitLnyKziotjy8AH47sdtgbpBdW8H3QPAnuHjfWILx6Tx_jpJ46VZuV3tWwY1Mo7CTDoRaSt6PDbmhIp3XtJFj_heL-QRbzQv2mWHfu2UUy9DCKYLCTSl=s1360-w1360-h1020-rw",
+      imageUrl: "/kingsbury_hotel.png",
       label: "The Venue"
     }
   ];
